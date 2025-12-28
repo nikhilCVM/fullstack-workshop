@@ -1,0 +1,27 @@
+function validatePassword(password) {
+    let errors = [];
+
+    if (password.length < 8) {
+        errors.push("Too short");
+    }
+    if (!/[A-Z]/.test(password)) {
+        errors.push("Missing uppercase");
+    }
+    if (!/[a-z]/.test(password)) {
+        errors.push("Missing lowercase");
+    }
+    if (!/[0-9]/.test(password)) {
+        errors.push("Missing number");
+    }
+    if (!/[!@#$%^&*]/.test(password)) {
+        errors.push("Missing special character");
+    }
+
+    return {
+        isValid: errors.length === 0,
+        errors: errors
+    };
+}
+
+console.log(validatePassword('Abc123!@'));
+console.log(validatePassword('abc'));

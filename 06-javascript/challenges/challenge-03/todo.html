@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Categorized Todo</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 500px; margin: auto; }
+    .task { display: flex; justify-content: space-between; padding: 8px; border-bottom: 1px solid #ddd; }
+    .task:hover .delete { visibility: visible; }
+    .delete { visibility: hidden; cursor: pointer; color: red; margin-left: 10px; }
+    .filters button { margin-right: 5px; }
+    .category-label { font-size: 12px; background: #f0f0f0; padding: 2px 6px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+
+  <h2>Todo List</h2>
+
+  <div>
+    <input id="taskInput" placeholder="Add Task" />
+    <select id="categorySelect">
+      <option value="Work">Work</option>
+      <option value="Personal">Personal</option>
+    </select>
+    <button onclick="addTask()">Add</button>
+  </div>
+
+  <br>
+
+  <div class="filters">
+    <strong>Filter:</strong>
+    <button onclick="setFilter('All')">All</button>
+    <button onclick="setFilter('Work')">Work</button>
+    <button onclick="setFilter('Personal')">Personal</button>
+  </div>
+
+  <br>
+
+  <div>
+    <strong>Counts:</strong>
+    <span id="workCount">Work: 0</span> |
+    <span id="personalCount">Personal: 0</span> |
+    <span id="totalCount">Total: 0</span>
+  </div>
+
+  <br>
+
+  <div id="taskList"></div>
+
+  <script src="todo.js"></script>
+</body>
+</html>
