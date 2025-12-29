@@ -50,7 +50,7 @@ function renderTasks() {
         <input type="checkbox" ${task.completed ? "checked" : ""} onchange="toggleTask(${task.id})" />
         ${task.text} <span class="category-label">[${task.category}]</span>
       </div>
-      <span class="delete" onclick="deleteTask(${task.id})">✖</span>
+      <span class="delete" onclick="deleteTask(${task.id})">✖</span>][]
     `;
     list.appendChild(div);
   });
@@ -65,3 +65,6 @@ function renderTasks() {
 }
 
 renderTasks(); // initial load
+
+// let tasks = JSON.parse(localStorage.getItem("todoTasks"))|| [];
+// let currentFilter

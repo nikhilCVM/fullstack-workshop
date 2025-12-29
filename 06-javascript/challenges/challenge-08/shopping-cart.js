@@ -1,79 +1,146 @@
-function createShoppingCart() {
-  const items = [];
-  let discount = 0;
-
-  return {
-    addItem(newItem) {
-      const existing = items.find(item => item.id === newItem.id);
-      if (existing) {
-        existing.quantity += newItem.quantity;
-      } else {
-        items.push({ ...newItem });
-      }
-    },
-
-    getItems() {
-      return items;
-    },
-
-    updateQuantity(id, qty) {
-      const item = items.find(item => item.id === id);
-      if (item && qty > 0) {
-        item.quantity = qty;
-      }
-    },
-
-    removeItem(id) {
-      const index = items.findIndex(item => item.id === id);
-      if (index !== -1) items.splice(index, 1);
-    },
-
-    getTotal() {
-      const total = items.reduce((sum, item) => sum + item.price * item.quantity, 0);
-      if (discount > 0) {
-        const discounted = total - (total * discount) / 100;
-        return Number(discounted.toFixed(2));
-      }
-      return total;
-    },
-
-    getItemCount() {
-      return items.reduce((count, item) => count + item.quantity, 0);
-    },
-
-    isEmpty() {
-      return items.length === 0;
-    },
-
-    applyDiscount(code, percent) {
-      if (percent > 0) discount = percent;
-    },
-
-    clear() {
-      items.length = 0;
-      discount = 0;
-    }
-  };
-}
-
-// ===== Test Run (same as your example) =====
 const cart = createShoppingCart();
 
+
+function createShoppingCart(){
+    let discount =0;
+    let Items=[];
+    //console.log(Items);
+
+    return {
+        addItem(newItem){
+            const existing = Items.find(i=>i.id===newItem.id);
+            if(existing){
+                existing.quantity = existing.quantity + newItem.quantity;
+                console.log(Items);
+            }
+            else{
+
+                // console.log(newItem);
+                console.log('first: ',Items);
+                Items.push({...newItem});
+                // Items = [...newItem];
+            }
+                
+               // console.log("osthunna")
+            
+            // if(existing){
+            //     id.quantity += 1;
+            // }
+            // console.log(Items);
+
+
+            
+        },  
+        getItems(){
+            // console.log(Items);
+            return Items;
+
+        },
+        
+        updateQuantity(reqId, incquan ){
+         const item = Items.find(i=>i.id===reqId);
+         if(item){
+            // console.log(item.quantity);
+            item.quantity= incquan;
+            console.log(item.quantity);
+         }
+        },
+
+         removeItem(remId){
+            //console.log(remId);
+            Items = Items.filter(i=>i.id!==remId); 
+            //console.log(Items);
+
+
+         },
+
+
+
+        
+        getTotal(){
+
+           let total= Items.reduce((total,i) => total + i.price*i.quantity ,0);
+            total = total-discount;
+            
+           
+             const discounted = total - (total * discount) / 100;
+             console.log(discounted);
+
+          
+            return total;
+         },
+        getItemCount(){
+           const total= Items.reduce((total,i) => total + i.quantity ,0);
+           console.log(Items);
+
+
+            console.log(total);
+            return total;
+         },
+         isEmpty(){
+            if(Items==0){
+                return true;
+            }
+            else {
+                return false;
+            }
+         },
+         
+         // getTotal();
+         // getItemCount();
+         // isEmpty();
+         // applyDiscount();
+         // clear();
+        
+        applyDiscount(code, percent){
+            // console.log(code);
+            // let num = code.replace("SAVE"," ");
+            // num = Number(num);
+            // console.log(num);
+            
+            // let price = 2997;
+            // // console.log(price);
+            //  discount = price * (percent/100);
+            // const finalAmount = price-discount;
+            // console.log(finalAmount);
+            // return finalAmount;
+            
+            if (percent > 0){
+                
+
+                
+                discount = percent;
+            } 
+            
+
+        },
+        clear(){
+            Items = [];
+
+        
+        }
+}
+}
+
+
+
 cart.addItem({ id: 1, name: 'Laptop', price: 999, quantity: 1 });
+console.log("why");
 cart.addItem({ id: 2, name: 'Mouse', price: 29, quantity: 2 });
-cart.addItem({ id: 1, name: 'Laptop', price: 999, quantity: 1 }); // increases quantity
+cart.addItem({ id: 1, name: 'Laptop', price: 999, quantity: 1 }); // Should increase quantity
 
 console.log(cart.getItems());
+// [{ id: 1, name: 'Laptop', price: 999, quantity: 2 }, { id: 2, name: 'Mouse', price: 29, quantity: 2 }]
 
-cart.updateQuantity(1, 3);
-cart.removeItem(2);
+cart.updateQuantity(1, 3);  // Set laptop quantity to 3
+cart.removeItem(2);         // Remove mouse
 
-console.log(cart.getTotal());
-console.log(cart.getItemCount());
-console.log(cart.isEmpty());
+console.log(cart.getTotal());        // 2997
+console.log(cart.getItemCount());    // 3
+console.log(cart.isEmpty());         // false
 
-cart.applyDiscount('SAVE10', 10);
-console.log(cart.getTotal());
+cart.applyDiscount('SAVE10', 10);    // 10% discount
+console.log(cart.getTotal());        // 2697.30
 
 cart.clear();
-console.log(cart.isEmpty());
+console.log(cart.isEmpty());         // true
