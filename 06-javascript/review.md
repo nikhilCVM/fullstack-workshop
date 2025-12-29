@@ -1,7 +1,7 @@
 # Review: 06-javascript
 
 **Exercise:** Exercise
-**Review Date:** 2025-12-29 13:43
+**Review Date:** 2025-12-29 13:48
 
 ---
 
@@ -29,6 +29,8 @@
     - ✅ Uses `const`/`let` (no `var`)
     - ✅ Uses strict equality (`===`)
     - ✅ Uses arrow functions
+    - 💡 Consider using template literals for string interpolation
+    - 💡 Consider using array methods (map, filter, reduce)
 
    **Score: 3/5**
 
@@ -50,6 +52,8 @@
     - ✅ Uses `const`/`let` (no `var`)
     - ✅ Uses strict equality (`===`)
     - 💡 Consider using arrow functions
+    - 💡 Consider using template literals for string interpolation
+    - 💡 Consider using array methods (map, filter, reduce)
 
    **Score: 2/5**
 
@@ -83,6 +87,7 @@
     - ✅ Uses `const`/`let` (no `var`)
     - ✅ Uses strict equality (`===`)
     - ✅ Uses arrow functions
+    - 💡 Consider using template literals for string interpolation
     - ✅ Uses modern array methods
 
    **Score: 4/5**
@@ -118,6 +123,8 @@
     - ✅ Uses `const`/`let` (no `var`)
     - ✅ Uses strict equality (`===`)
     - 💡 Consider using arrow functions
+    - 💡 Consider using template literals for string interpolation
+    - 💡 Consider using array methods (map, filter, reduce)
 
    **Score: 2/5**
 
@@ -128,6 +135,8 @@
     - ✅ Uses `const`/`let` (no `var`)
     - ✅ Uses strict equality (`===`)
     - ✅ Uses arrow functions
+    - 💡 Consider using template literals for string interpolation
+    - 💡 Consider using array methods (map, filter, reduce)
 
    **Score: 3/5**
 
@@ -138,6 +147,8 @@
     - ✅ Uses `const`/`let` (no `var`)
     - ✅ Uses strict equality (`===`)
     - 💡 Consider using arrow functions
+    - 💡 Consider using template literals for string interpolation
+    - 💡 Consider using array methods (map, filter, reduce)
 
    **Score: 2/5**
 
@@ -159,6 +170,8 @@
     - ✅ Uses `const`/`let` (no `var`)
     - ✅ Uses strict equality (`===`)
     - 💡 Consider using arrow functions
+    - 💡 Consider using template literals for string interpolation
+    - 💡 Consider using array methods (map, filter, reduce)
 
    **Score: 2/5**
 
@@ -169,6 +182,8 @@
     - ✅ Uses `const`/`let` (no `var`)
     - ✅ Uses strict equality (`===`)
     - 💡 Consider using arrow functions
+    - 💡 Consider using template literals for string interpolation
+    - 💡 Consider using array methods (map, filter, reduce)
 
    **Score: 2/5**
 
