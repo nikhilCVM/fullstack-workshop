@@ -1,7 +1,7 @@
 # Review: 06-javascript
 
 **Exercise:** Exercise
-**Review Date:** 2025-12-30 11:25
+**Review Date:** 2025-12-30 15:28
 
 ---
 
@@ -13,37 +13,37 @@
 
 📄 **counter.html**
    Path: `06-javascript/challenges/challenge-01/counter.html`
-   Lines: 24
+   Lines: 40
 
     - ✅ Has `<!DOCTYPE html>`
-    - 💡 Consider using semantic tags (header, nav, main, etc.)
+    - ✅ Uses semantic HTML5 tags
     - ✅ Has viewport meta tag (mobile-friendly)
     - ✅ Has `lang` attribute
 
-   **Score: 4/5**
+   **Score: 5/5**
 
 📄 **counter.js**
    Path: `06-javascript/challenges/challenge-01/counter.js`
-   Lines: 63
+   Lines: 42
 
     - ✅ Uses `const`/`let` (no `var`)
     - ✅ Uses strict equality (`===`)
     - ✅ Uses arrow functions
-    - 💡 Consider using template literals for string interpolation
-    - 💡 Consider using array methods (map, filter, reduce)
+    - ✅ Uses template literals
+    - ✅ Uses modern array methods
 
-   **Score: 3/5**
+   **Score: 5/5**
 
 📄 **form-validator.html**
    Path: `06-javascript/challenges/challenge-02/form-validator.html`
-   Lines: 48
+   Lines: 52
 
     - ✅ Has `<!DOCTYPE html>`
-    - 💡 Consider using semantic tags (header, nav, main, etc.)
+    - ✅ Uses semantic HTML5 tags
     - ✅ Has viewport meta tag (mobile-friendly)
     - ✅ Has `lang` attribute
 
-   **Score: 4/5**
+   **Score: 5/5**
 
 📄 **form-validator.js**
    Path: `06-javascript/challenges/challenge-02/form-validator.js`
@@ -59,14 +59,14 @@
 
 📄 **todo.html**
    Path: `06-javascript/challenges/challenge-03/todo.html`
-   Lines: 54
+   Lines: 55
 
     - ✅ Has `<!DOCTYPE html>`
-    - 💡 Consider using semantic tags (header, nav, main, etc.)
+    - ✅ Uses semantic HTML5 tags
     - ✅ Has viewport meta tag (mobile-friendly)
-    - 💡 Add `lang` attribute to `<html>` tag
+    - ✅ Has `lang` attribute
 
-   **Score: 3/5**
+   **Score: 5/5**
 
 📄 **todo.js**
    Path: `06-javascript/challenges/challenge-03/todo.js`
@@ -82,15 +82,15 @@
 
 📄 **shopping-cart.js**
    Path: `06-javascript/challenges/challenge-08/shopping-cart.js`
-   Lines: 145
+   Lines: 101
 
     - ✅ Uses `const`/`let` (no `var`)
-    - ❌ Uses loose equality (`==`) 1 times
+    - ✅ Uses strict equality (`===`)
     - ✅ Uses arrow functions
-    - 💡 Consider using template literals for string interpolation
+    - ✅ Uses template literals
     - ✅ Uses modern array methods
 
-   **Score: 3/5**
+   **Score: 5/5**
 
 📄 **library.js**
    Path: `06-javascript/challenges/challenge-09/library.js`
@@ -118,39 +118,39 @@
 
 📄 **Deep_Clone.js**
    Path: `06-javascript/challenges/challenge-11/Deep_Clone.js`
-   Lines: 26
-
-    - ✅ Uses `const`/`let` (no `var`)
-    - ✅ Uses strict equality (`===`)
-    - 💡 Consider using arrow functions
-    - 💡 Consider using template literals for string interpolation
-    - 💡 Consider using array methods (map, filter, reduce)
-
-   **Score: 2/5**
-
-📄 **Type_Checker_Function.js**
-   Path: `06-javascript/challenges/challenge-12/Type_Checker_Function.js`
-   Lines: 22
-
-    - ✅ Uses `const`/`let` (no `var`)
-    - ✅ Uses strict equality (`===`)
-    - ✅ Uses arrow functions
-    - 💡 Consider using template literals for string interpolation
-    - 💡 Consider using array methods (map, filter, reduce)
-
-   **Score: 3/5**
-
-📄 **Validate_Password.js**
-   Path: `06-javascript/challenges/challenge-13/Validate_Password.js`
    Lines: 27
 
     - ✅ Uses `const`/`let` (no `var`)
     - ✅ Uses strict equality (`===`)
-    - 💡 Consider using arrow functions
-    - 💡 Consider using template literals for string interpolation
-    - 💡 Consider using array methods (map, filter, reduce)
+    - ✅ Uses arrow functions
+    - ✅ Uses template literals
+    - ✅ Uses modern array methods
 
-   **Score: 2/5**
+   **Score: 5/5**
+
+📄 **Type_Checker_Function.js**
+   Path: `06-javascript/challenges/challenge-12/Type_Checker_Function.js`
+   Lines: 11
+
+    - ✅ Uses `const`/`let` (no `var`)
+    - ✅ Uses strict equality (`===`)
+    - ✅ Uses arrow functions
+    - ✅ Uses template literals
+    - ✅ Uses modern array methods
+
+   **Score: 5/5**
+
+📄 **Validate_Password.js**
+   Path: `06-javascript/challenges/challenge-13/Validate_Password.js`
+   Lines: 32
+
+    - ✅ Uses `const`/`let` (no `var`)
+    - ✅ Uses strict equality (`===`)
+    - ✅ Uses arrow functions
+    - ✅ Uses template literals
+    - ✅ Uses modern array methods
+
+   **Score: 5/5**
 
 📄 **index.html**
    Path: `06-javascript/exercises/exercise-01-getting-started/index.html`
@@ -175,19 +175,31 @@
 
    **Score: 2/5**
 
-📄 **variables.js**
-   Path: `06-javascript/exercises/exercise-02-Variables/variables.js`
-   Lines: 20
+📄 **Challenge_2_Type_Checker_Function.js**
+   Path: `06-javascript/exercises/exercise-02-Variables/Challenge_2_Type_Checker_Function.js`
+   Lines: 21
 
     - ✅ Uses `const`/`let` (no `var`)
     - ✅ Uses strict equality (`===`)
-    - 💡 Consider using arrow functions
+    - ✅ Uses arrow functions
     - 💡 Consider using template literals for string interpolation
     - 💡 Consider using array methods (map, filter, reduce)
 
-   **Score: 2/5**
+   **Score: 3/5**
 
-### Topic Score: 49 / 75 (65%)
+📄 **variables.js**
+   Path: `06-javascript/exercises/exercise-02-Variables/variables.js`
+   Lines: 46
+
+    - ✅ Uses `const`/`let` (no `var`)
+    - ✅ Uses strict equality (`===`)
+    - ✅ Uses arrow functions
+    - ✅ Uses template literals
+    - ✅ Uses modern array methods
+
+   **Score: 5/5**
+
+### Topic Score: 71 / 80 (88%)
 
 ---
 
