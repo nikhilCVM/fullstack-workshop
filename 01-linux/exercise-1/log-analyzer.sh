@@ -1,7 +1,7 @@
 
 LOG_FILE=${1:-"C:\Users\nikhil\Documents\sample.txt"}
 
-#!/bin/bash
+!/bin/bash
 
 
 IP_LIST=$(grep -oE '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' "$LOG_FILE" | sort | uniq)
