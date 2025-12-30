@@ -1,7 +1,7 @@
 # Review: 01-linux
 
 **Exercise:**  Exercise: Log File Analyzer Script
-**Review Date:** 2025-12-29 16:58
+**Review Date:** 2025-12-30 11:13
 
 ---
 
@@ -11,12 +11,12 @@
 
 ### Required Files
 
-- ❌ Missing: `log-analyzer.sh`
+- ✅ Found: `log-analyzer.sh`
 
 ### Code Review
 
-📄 **log-analyser.sh**
-   Path: `01-linux/exercise-1/log-analyser.sh`
+📄 **log-analyzer.sh**
+   Path: `01-linux/exercise-1/log-analyzer.sh`
    Lines: 37
 
     - ❌ Missing shebang (`#!/bin/bash`)
@@ -27,7 +27,7 @@
 
    **Score: 1/5**
 
-### Topic Score: 1 / 10 (10%)
+### Topic Score: 6 / 10 (60%)
 
 ### Technical Checklist
 
