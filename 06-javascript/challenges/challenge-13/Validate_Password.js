@@ -1,27 +1,32 @@
-function validatePassword(password) {
-    let errors = [];
+const validatePassword = (password) => {
+  const rules = [
+    { test: password.length >= 8, error: "Too short" },
+    { test: /[A-Z]/.test(password), error: "Missing uppercase" },
+    { test: /[a-z]/.test(password), error: "Missing lowercase" },
+    { test: /[0-9]/.test(password), error: "Missing number" },
+    { test: /[!@#$%^&*]/.test(password), error: "Missing special character" }
+  ];
 
-    if (password.length < 8) {
-        errors.push("Too short");
-    }
-    if (!/[A-Z]/.test(password)) {
-        errors.push("Missing uppercase");
-    }
-    if (!/[a-z]/.test(password)) {
-        errors.push("Missing lowercase");
-    }
-    if (!/[0-9]/.test(password)) {
-        errors.push("Missing number");
-    }
-    if (!/[!@#$%^&*]/.test(password)) {
-        errors.push("Missing special character");
-    }
+  const errors = rules
+    .filter(r => !r.test)
+    .map(r => r.error);
 
-    return {
-        isValid: errors.length === 0,
-        errors: errors
-    };
-}
+  return { isValid: errors.length === 0, errors };
+};
 
-console.log(validatePassword('Abc123!@'));
-console.log(validatePassword('abc'));
+// Test runner (still arrow + array methods)
+['Abc123!@', 'abc'].map(p => {
+  const { isValid, errors } = validatePassword(p);
+
+  // Build bullet error list using reduce
+  const errorText = errors.length
+    ? errors.reduce((output, err) => `${output}• ${err}\n`, '') 
+    : `✔ Password passed all checks!`;
+
+  console.log(`
+============================
+Password tested: "${p}"
+Status: ${isValid ? `✔ VALID` : `✖ INVALID`}
+Issues found:
+${errorText}============================`);
+});

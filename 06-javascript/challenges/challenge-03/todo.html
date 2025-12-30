@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-
   <title>Categorized Todo</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,41 +13,43 @@
     .category-label { font-size: 12px; background: #f0f0f0; padding: 2px 6px; border-radius: 4px; }
   </style>
 </head>
+
 <body>
 
-  <h2>Todo List</h2>
+<header>
+  <h1>Todo List</h1>
+</header>
 
-  <div>
+<nav class="filters" aria-label="Task category filters">
+  <strong>Filter:</strong>
+  <button onclick="setFilter('All')">All</button>
+  <button onclick="setFilter('Work')">Work</button>
+  <button onclick="setFilter('Personal')">Personal</button>
+</nav>
+
+<main>
+  <section aria-label="Add new task">
     <input id="taskInput" placeholder="Add Task" />
-    <select id="categorySelect">
+    <select id="categorySelect" aria-label="Select task category">
       <option value="Work">Work</option>
       <option value="Personal">Personal</option>
     </select>
     <button onclick="addTask()">Add</button>
-  </div>
+  </section>
 
-  <br>
-
-  <div class="filters">
-    <strong>Filter:</strong>
-    <button onclick="setFilter('All')">All</button>
-    <button onclick="setFilter('Work')">Work</button>
-    <button onclick="setFilter('Personal')">Personal</button>
-  </div>
-
-  <br>
-
-  <div>
+  <section aria-label="Task counts">
     <strong>Counts:</strong>
     <span id="workCount">Work: 0</span> |
     <span id="personalCount">Personal: 0</span> |
     <span id="totalCount">Total: 0</span>
-  </div>
+  </section>
 
-  <br>
+  <section id="taskList" aria-label="Todo tasks"></section>
+</main>
 
-  <div id="taskList"></div>
-
+<footer>
   <script src="todo.js"></script>
+</footer>
+
 </body>
 </html>

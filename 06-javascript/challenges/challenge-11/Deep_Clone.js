@@ -1,27 +1,27 @@
 let original = {
-    name: 'John',
-    address: {
-        city: 'New York',
-        zip: '10001'
-    },
-    hobbies: ['reading', 'gaming']
+  name: 'John',
+  address: {
+    city: 'New York',
+    zip: '10001'
+  },
+  hobbies: ['reading', 'gaming']
 };
 
-function deepClone(obj) {
-    let newuser = {...obj};
-    
-    return newuser
-        
-        
-        
-
-    
-        // Your code here
-}
+// Deep clone using arrow function
+const deepClone = (obj) => {
+  return {
+    ...obj,
+    address: { ...obj.address }, // clone nested object
+    hobbies: obj.hobbies.map(hobby => `${hobby}`) // clone array using map
+  };
+};
 
 let cloned = deepClone(original);
+
+// Mutations on cloned object
 cloned.address.city = 'Boston';
 cloned.hobbies.push('swimming');
 
-console.log(original.address.city);  // Should still be 'New York'
-console.log(original.hobbies);       // Should still be ['reading', 'gaming']
+// Results (original remains unchanged)
+console.log(`City in original object: ${original.address.city}`); 
+console.log(`Hobbies in original object: ${JSON.stringify(original.hobbies)}`);
