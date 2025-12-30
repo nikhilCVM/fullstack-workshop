@@ -1,7 +1,7 @@
 # Review: 06-javascript
 
 **Exercise:** Exercise
-**Review Date:** 2025-12-29 16:58
+**Review Date:** 2025-12-30 11:25
 
 ---
 
@@ -59,18 +59,18 @@
 
 📄 **todo.html**
    Path: `06-javascript/challenges/challenge-03/todo.html`
-   Lines: 51
+   Lines: 54
 
     - ✅ Has `<!DOCTYPE html>`
     - 💡 Consider using semantic tags (header, nav, main, etc.)
-    - ❌ Missing viewport meta tag
+    - ✅ Has viewport meta tag (mobile-friendly)
     - 💡 Add `lang` attribute to `<html>` tag
 
-   **Score: 2/5**
+   **Score: 3/5**
 
 📄 **todo.js**
    Path: `06-javascript/challenges/challenge-03/todo.js`
-   Lines: 67
+   Lines: 69
 
     - ✅ Uses `const`/`let` (no `var`)
     - ✅ Uses strict equality (`===`)
@@ -82,15 +82,15 @@
 
 📄 **shopping-cart.js**
    Path: `06-javascript/challenges/challenge-08/shopping-cart.js`
-   Lines: 79
+   Lines: 145
 
     - ✅ Uses `const`/`let` (no `var`)
-    - ✅ Uses strict equality (`===`)
+    - ❌ Uses loose equality (`==`) 1 times
     - ✅ Uses arrow functions
     - 💡 Consider using template literals for string interpolation
     - ✅ Uses modern array methods
 
-   **Score: 4/5**
+   **Score: 3/5**
 
 📄 **library.js**
    Path: `06-javascript/challenges/challenge-09/library.js`
