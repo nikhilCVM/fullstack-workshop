@@ -7,7 +7,7 @@ set -e
 LOG_FILE="${1:-C:/Users/nikhil/Documents/sample.txt}"
 
 
-if [ ! -f "$LOG_FILE" ]; then
+if [ ! -f "$LOG_FILE" ]; then 
     echo "❌ Error: Log file not found: $LOG_FILE"
     echo "💡 Tip: Provide a valid log file path as an argument."
     exit 1
