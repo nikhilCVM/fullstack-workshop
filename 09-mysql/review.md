@@ -1,7 +1,7 @@
 # Review: 09-mysql
 
 **Exercise:**  Exercise: E-Commerce Database Design and Queries
-**Review Date:** 2026-01-02 13:57
+**Review Date:** 2026-01-02 16:49
 
 ---
 
@@ -27,9 +27,89 @@ Please complete the correct exercise and resubmit.
 
 ## Challenge
 
-**Status:** ⚠️ Not submitted
+**Status:** ✅ Submitted (6 files)
 
-Submit to: `09-mysql/challenges/`
+### Challenge Relevance Check
+
+✅ Submission appears relevant to the exercise
+   Found keywords: employee department salary project assignment 
+
+### Challenge Code Review
+
+📄 **departments-states.sql**
+   Lines: 8
+
+    📋 **SQL Query Review**
+
+    - ✅ Contains SELECT statement
+    - ✅ Specifies table source
+    - ✅ Uses filtering/joining
+
+   **Score: 3/3**
+
+📄 **employee-hierarchy.sql**
+   Lines: 6
+
+    📋 **Challenge 2: Employee Hierarchy**
+    Expected: employee_name, manager_name (self-join)
+
+    - ✅ Uses self-join on employees table
+    - ✅ Uses LEFT JOIN (handles employees without managers)
+    - ✅ Joins on manager_id = id
+    - ✅ Uses table aliases
+
+   **Score: 4/4**
+
+📄 **name-formatter.sql**
+   Lines: 5
+
+    📋 **Challenge 6: Employee Name Formatter**
+    Expected: formatted_name, email, initials (string functions)
+
+    - ✅ Uses UPPER() function
+    - ✅ Uses CONCAT() for string building
+    - ✅ Uses LEFT() for initials
+    - ✅ Generates email format
+
+   **Score: 4/4**
+
+📄 **project-workload.sql**
+   Lines: 11
+
+    📋 **Challenge 3: Project Workload**
+    Expected: project_name, budget, team_size, total_hours
+
+    - ✅ Joins projects with assignments
+    - ✅ Counts team members
+    - ✅ Sums allocated hours
+    - ✅ Filters budget > 50000
+    - ✅ Orders by total hours descending
+
+   **Score: 5/5**
+
+📄 **tenure-function.sql**
+   Lines: 1
+
+    📋 **SQL Query Review**
+
+
+   **Score: 0/3**
+
+📄 **top-earners.sql**
+   Lines: 7
+
+    📋 **Challenge 4: Top Earners**
+    Expected: department, name, salary, rank_in_dept (window function)
+
+    - ✅ Uses window ranking function
+    - ✅ Partitions by department
+    - ✅ Orders by salary descending
+    - ❌ Missing filter for top 3 (WHERE rank <= 3)
+
+   **Score: 3/4**
+
+### Challenge Score: 19 / 23 (82%)
+
 
 ---
 
