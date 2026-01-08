@@ -1,0 +1,18 @@
+import java.util.*;
+import java.util.stream.*;
+import java.util.OptionalDouble;
+
+class Nikhil {
+
+    public static OptionalDouble averageOfEvens(List<Integer> numbers) {
+        return numbers.stream()
+                      .filter(n -> n % 2 == 0)
+                      .mapToInt(n -> n)
+                      .average();
+    }
+
+    public static void main(String[] args) {
+        System.out.println(averageOfEvens(Arrays.asList(1, 2, 3, 4, 5, 6))); // OptionalDouble[4.0]
+        System.out.println(averageOfEvens(Arrays.asList(1, 3, 5)));          // OptionalDouble.empty
+    }
+}
